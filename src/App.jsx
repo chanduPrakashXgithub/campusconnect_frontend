@@ -5,6 +5,7 @@ import GmailDashboard from './pages/GmailDashboard';
 import NewsDashboard from './pages/NewsDashboard';
 import AuthSuccess from './pages/AuthSuccess';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   const [loginUrl, setLoginUrl] = useState('');
@@ -25,6 +26,7 @@ function App() {
           <a href="/gmail" className="btn btn-primary mx-2">Gmail Inbox</a>
           <a href="/news" className="btn btn-success mx-2">College News</a>
           <a href="/privacy" className="btn btn-success mx-2">Privacy Policy</a>
+          <a href="/terms" className="btn btn-primary mx-2">Terms of Service</a>
         </nav>
       </div>
 
@@ -33,6 +35,7 @@ function App() {
         <Route path="/gmail" element={<GmailDashboard />} />
         <Route path="/news" element={<NewsDashboard />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
       </Routes>
     </BrowserRouter>
   );
