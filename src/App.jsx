@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GmailDashboard from './pages/GmailDashboard';
 import NewsDashboard from './pages/NewsDashboard';
 import AuthSuccess from './pages/AuthSuccess';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   const [loginUrl, setLoginUrl] = useState('');
@@ -23,6 +24,7 @@ function App() {
         <nav className="mt-3">
           <a href="/gmail" className="btn btn-primary mx-2">Gmail Inbox</a>
           <a href="/news" className="btn btn-success mx-2">College News</a>
+          <a href="/privacy" className="btn btn-success mx-2">Privacy Policy</a>
         </nav>
       </div>
 
@@ -30,6 +32,7 @@ function App() {
         <Route path="/auth-success" element={<AuthSuccess />} />
         <Route path="/gmail" element={<GmailDashboard />} />
         <Route path="/news" element={<NewsDashboard />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );
